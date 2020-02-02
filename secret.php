@@ -15,3 +15,16 @@
 		}
 		 
 	}
+
+?>
+
+<h1>
+	Secret Page
+</h1>
+
+<a href="?logout">Click here to logout Logout</a>
+
+<?php
+
+require_once("footer.php");
+?>

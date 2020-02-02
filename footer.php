@@ -12,6 +12,6 @@ if ($_SESSION['fail']>0)
 }
 
 ?>
-<p>Copyright &copy; 2020-01-30.Date </p>
+<p>Copyright &copy; 2020-02-30.Date </p>
 </body>
 </html>

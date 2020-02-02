@@ -6,8 +6,8 @@ function  db_connect()
 		
 		$dbhost = "remotemysql.com";
 		
-		$dbname = ' Bj4qIbE1Md';
-		$dbuser = ' Bj4qIbE1Md';
+		$dbname = 'Bj4qIbE1Md';
+		$dbuser = 'Bj4qIbE1Md';
 		
 		$dbpass = 'Pxkv4c2W2T';
 	

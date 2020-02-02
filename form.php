@@ -23,7 +23,7 @@ die;
 $dbhost = "remotemysql.com";
     $dbname = 'Bj4qIbE1Md';
     $dbuser = 'Bj4qIbE1Md';
-    $dbpass = 'H2qN9gxv3M';
+    $dbpass = 'Pxkv4c2W2Ts';
 $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
 
 $query = "SELECT * FROM color";

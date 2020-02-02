@@ -4,8 +4,8 @@ require_once('header.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {	
-	include 'user.php';
-	$user=new user();
+	include 'User.php';
+	$user=new User();
 	$user->validate_user($_POST['uname'],$_POST['password']);
 }
 ?>
