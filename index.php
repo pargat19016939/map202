@@ -1,11 +1,6 @@
+<?php 
 
-<p>
-<a href="login.php">login</a>
-</p>
-	
-	
-	
-	
-	
-	
-	
+require_once 'app/init.php';
+
+$app = new App;
+
