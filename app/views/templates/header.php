@@ -16,6 +16,9 @@ if (!isset($_SESSION['auth'])) {
             body>.container {
                 padding: 60px 15px 0;
             }
+			ul  {
+			  list-style: square inside url("sqpurple.gif");
+			}
         </style>
     </head>
 
@@ -39,6 +42,8 @@ if (!isset($_SESSION['auth'])) {
                         </li>-->
                     </ul>
 					<ul class="nav navbar-nav navbar-right">
+						 <li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+						 <li class="nav-item"><a class="nav-link" href="/courses/insertdata/">Insert</a></li>
                         <li class="nav-item"><a class="nav-link" href="logout/pargat">Logout</a></li>
                     </ul>
                 </div>
