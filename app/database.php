@@ -1,13 +1,13 @@
 <?php
 
 function db_connect() {
-   $dbhost = 'remotemysql.com';
-	$dbname = 'Bj4qIbE1Md';
-	$dbuser = 'Bj4qIbE1Md';
-	$dbpass = 'Pxkv4c2W2T';
+   $dbhost = 'salt.db.elephantsql.com';
+	$dbname = 'vetvgzgf';
+	$dbuser = 'vetvgzgf';
+	$dbpass = 'tVd8UIiWR8v6jhX5h1rR3kl-9UKE6S3w';
 	
 	try {
-		$dbh = new PDO('mysql:host=remotemysql.com;dbname=Bj4qIbE1Md', $dbuser, $dbpass);
+		$dbh = new PDO("pgsql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
 	} catch (PDOException $e) {
 		echo "Error!: " . $e->getMessage() . "<br/>";
  		die();

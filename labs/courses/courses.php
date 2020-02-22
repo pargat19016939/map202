@@ -1,10 +1,12 @@
 <?php require_once 'app/views/templates/header.php' ?>
-  <ul>
+<div class="container">
+ <ul>
   <?php
   foreach($data['courses'] as $courses)
   { 
-	  echo "<li>$courses['courseName']<li>";
+	  	echo '<li>'.$courses['coursename'].'</li>';
   } 
   ?>
-  </ul>
+  </ul>	
+</div> 
 <?php require_once 'app/views/templates/footer.php' ?>
