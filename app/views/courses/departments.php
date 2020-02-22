@@ -1,11 +1,14 @@
 <?php require_once 'app/views/templates/header.php' ?>
+<div class="container" style="margin-top: 100px;">
   <ul>
   <?php
   foreach($data['departments'] as $department)
   {
-	  $department_text=$department['department'];
-	  echo "<li><a href='courses/$department_text'>$department_text</a><li>";
+	  $d=$department['department'];
+	  
+	  echo "<li><a href='courses/$d'>$d</a></li>";
   } 
   ?>
   </ul>
+</div>
 <?php require_once 'app/views/templates/footer.php' ?>
