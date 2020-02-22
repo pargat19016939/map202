@@ -1,3 +1,7 @@
+<?php require_once 'app/views/templates/header.php' ?>
+<div class="container">
+	
+
 <form action="/courses/insertdata" method="POST">
   <p>
 	    <label>Course id</label></p>
@@ -19,18 +23,7 @@
  
   <br>
 	<br>
-  <button type="submit">Submit</button>	
-	 <?php
-   $isSuccessfull=$data['is_insert_successfull'];
-    if(isset($isSuccessfull))
-    {
-        if($isSuccessfull)
-        {
-            echo "<div> <strong>A record has been inserted successfully.</strong></div>";
-        }
-        else{
-            echo "<div> <strong>Insertion Failed.</strong></div>";
-        }
-    }
-  ?>
+  <button type="submit">Submit</button>	 
 </form>
+	</div>
+<?php require_once 'app/views/templates/footer.php' ?>
