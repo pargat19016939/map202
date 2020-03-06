@@ -10,19 +10,58 @@ class User {
         
     }
 
+
+	public function register ($username, $password)
+	{
+		try{
+	
+$database_db = db_connect();
+		
+		
+				$stm_obj = $database_db->prepare("select * from users WHERE username = :name; ");
+	
+					$stm_obj->bindValue(':name', $username);
+				$stm_obj->execute();
+$result_row = $stm_obj->fetch(PDO::FETCH_ASSOC);
+		
+					if(	$result_row['username']!=null)
+					{
+								return false;
+					}
+		else
+		{
+					$stm_obj = $database_db->prepare("INSERT INTO users (username,password) VALUES (:name,:password); ");
+
+$stm_obj->bindValue(':name', $username);
+			
+						$stm_obj->bindValue(':password', $password);
+$stm_obj->execute();
+		
+			
+			return true;
+		}
+		}
+		catch(Exception $e) 
+		{	
+							return false;
+		}
+	
+	}
+
+
+
     public function authenticate($username, $password) {
         /*
          * if username and password good then
-         * $this->auth = true;
-         */ 
-		
-		$db = db_connect();
-		$statement = $db->prepare("select * from users
-		WHERE username = :name;
-		");
-		$statement->bindValue(':name', $username);
-		$statement->execute();
-		$rows = $statement->fetch(PDO::FETCH_ASSOC);
+         */
+		 
+		$database_db = db_connect();
+        $statement = $database_db->prepare("select * from users
+                                WHERE username = :name;
+                ");
+        $statement->bindValue(':name', $username);
+        $statement->execute();
+        $rows = $statement->fetch(PDO::FETCH_ASSOC);
 		
 		if (password_verify($password, $rows['password'])) {
 			$_SESSION['auth'] = 1;
@@ -38,16 +77,9 @@ class User {
 			header('Location: /login');
 			die;
 		}
-    }
-	
-	public function register ($username, $password) {
-		$db = db_connect();
-        $statement = $db->prepare("INSERT INTO users (username)"
-                . " VALUES (:name); ");
-
-        $statement->bindValue(':name', $username);
-        $statement->execute();
-
 	}
+	
+	
+
 
 }
